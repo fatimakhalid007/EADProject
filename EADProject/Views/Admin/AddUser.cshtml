@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "AddUser";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+ 
+<h2>AddUser</h2>
+<h1>@ViewBag.Msg</h1>
+<form action="/Admin/AddUser" method="post" style="margin-left:300px;padding-bottom:900px " >
+  <div class="container">
+     
+       <label><b>Name</b></label>
+    <input style="margin-left:30px" type="text" placeholder="Enter Name" name="n" required><br>
+    <label><b>Email</b></label>
+    <input style="margin-left:30px" type="text" placeholder="Enter Email" name="e" required><br>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="p" required><br>
+
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="rp" required>
+
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>

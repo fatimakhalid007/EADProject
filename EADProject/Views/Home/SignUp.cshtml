@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_myWeb.cshtml";
+}
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    /*background-color: #4CAF50;*/
+background-color:yellowgreen;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color:lightgrey;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+    float: center;
+    width: 30%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+
+</style>
+<h2 style="margin-left:500px">Signup Form</h2><br />
+<h2>@ViewBag.Msg</h2>
+    <div style="text-align:center">
+<form action="/Home/SignUp" method="post"  style="margin-left:300px;margin-right:600px;padding-bottom:100px;backface-visibility: hidden " >
+  <div class="container">
+       <label><b>Name</b></label>
+    <input style="margin-left:30px" type="text" placeholder="Enter Name" name="n" required><br>
+    <label><b>Email</b></label>
+    <input style="margin-left:30px" type="text" placeholder="Enter Email" name="e" required><br>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="p" required><br>
+
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="rp" required>
+
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+    </div>

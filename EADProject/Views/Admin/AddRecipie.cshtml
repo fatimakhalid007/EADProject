@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "AddRecipie";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>AddRecipie</h2>
+
+<h2>Tables</h2>
+ <div class="wrapper">
+   <div id="page-wrapper">
+    <section class="content">
+	  <div class="row">
+        <!-- full column -->
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h2 class="box-title">Users</h2>
+              <span style="float:left"> <h4>Add Recipie</h4><br></span>
+           </div>
+       <div>
+ <form action="AddRecipie" method="post">
+  <br />Name<br />
+    <input type="text" placeholder="Enter Name" value="" name="name" /><br/>
+     Recipie Ingridients<br />
+    <textarea id="tareaIng" rows="10" cols="1000" name="r"></textarea><br />
+    Category<br />
+    <input type="text" placeholder="enter type FastFOOd Or Deserts.." value="" name="c" /><br />
+    <p>Write Recipies</p>
+    <textarea id="tarea" rows="30" cols="300" name="recipie"></textarea><br />
+     <p>Write Any Detail</p>
+     <textarea id="t1" rows="10" cols="100" name="detail"></textarea><br />
+
+    <input type="text" placeholder="Enter Name" value="" name="img" />
+    <button type="submit" name="Choose Upload" value="Choose Image">Choose Image</button><br /><br />
+
+    <button type="submit" name="Submit" value="Submit">Submit</button>
+
+</form>
+</div>
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--/.col (full) -->
+      </div>
+    </section>
+               </div>
+        </div>
