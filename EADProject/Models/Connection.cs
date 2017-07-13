@@ -10,9 +10,11 @@ namespace EADProject.Models
     {
         public static SqlConnection getConnection()
         {
+            //String System=System.Confi
+//            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-378F8FV\SQLEXPRESS2012;Initial Catalog=EADProject;Integrated Security=True;Pooling=False");
+            SqlConnection con = new SqlConnection(@"Server=d84944bc-86ec-4b37-9b43-a7ad010dfeff.sqlserver.sequelizer.com;Database=dbd84944bc86ec4b379b43a7ad010dfeff;User ID=wuqlqaeghliccray;Password=yiyUzcvyJnpKkpi8ATABDHGafi7z2mBWkZJnfqgpKgCjqncceNMNjnYYJyNqd4Fw;");
 
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-378F8FV\SQLEXPRESS2012;Initial Catalog=EADProject;Integrated Security=True;Pooling=False");
-            con.Open();
+con.Open();
             return con;
         }
     }
