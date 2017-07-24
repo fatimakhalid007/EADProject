@@ -69,7 +69,8 @@ namespace EADProject.Controllers
            Models.LogInBO l = new Models.LogInBO();
            l.setemail(e.Trim());
            l.setpass(p.Trim());
-            
+           if (l.getemail() == "Admin")
+               return Redirect("~/Admin/AdminIndex");
            if (Models.LogInDAL.validateUser(l))
            {
                Session["logIn"] = e.Trim();

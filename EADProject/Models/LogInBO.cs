@@ -15,7 +15,7 @@ namespace EADProject.Models
         }
         public string getemail()
         {
-            return pass;
+            return email;
         }
         public void setpass(string p)
         {
