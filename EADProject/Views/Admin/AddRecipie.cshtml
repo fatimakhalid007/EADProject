@@ -2,7 +2,26 @@
     ViewBag.Title = "AddRecipie";
     Layout = "~/Views/Shared/_Admin.cshtml";
 }
+<script>
+    $(function () {
 
+        $("#up").click(function () {
+
+            $("#b1").trigger("click");
+
+        });
+
+        $("#b1").change(function () {
+            //var files = $(this).get(0).files;
+            var files = this.files;
+            if (files.length > 0) {
+                for (var ind = 0; ind < files.length; ind++) {
+                    console.log(files[ind]);
+                }
+            }
+        });	//end of change event	
+    });
+</script>
 <h2>AddRecipie</h2>
 
 <h2>Tables</h2>
@@ -31,8 +50,10 @@
      <p>Write Any Detail</p>
      <textarea id="t1" rows="10" cols="100" name="detail"></textarea><br />
 
-    <input type="text" placeholder="Enter Name" value="" name="img" />
-    <button type="submit" name="Choose Upload" value="Choose Image">Choose Image</button><br /><br />
+     <input type="image"  name="image" id="b1"/>
+
+    <input type="text" placeholder="Enter Name" value="" name="img" id="=b"/>
+    <button type="submit" name="Choose Upload" value="Choose Image" id="up">Choose Image</button><br /><br />
 
     <button type="submit" name="Submit" value="Submit">Submit</button>
 

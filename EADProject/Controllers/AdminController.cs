@@ -36,6 +36,20 @@ namespace EADProject.Controllers
             re.recipie = recipie;
 
             Models.RecipieDAL.AddRecipie(re);
+            var uniquename = "";
+            if (Request.Files["Image"] != null)
+            {
+                var file = Request.Files["Image"];
+                if (file.FileName != "")
+                {
+                    var ext = System.IO.Path.GetExtension(file.FileName);
+                    uniquename = Guid.NewGuid().ToString() + ext;
+                    var rootPath=Server.MapPath("~/UploadImages");
+                    var filePath = System.IO.Path.Combine(rootPath,uniquename);
+                    file.SaveAs(filePath);
+
+                }
+            }
             return View();
             
 

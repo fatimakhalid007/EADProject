@@ -633,6 +633,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\AdminCss\" />
+    <Folder Include="UploadImages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
