@@ -38,7 +38,7 @@
               <span style="float:left"> <h4>Add Recipie</h4><br></span>
            </div>
        <div>
- <form action="AddRecipie" method="post">
+ <form action="AddRecipie" method="post" enctype="multipart/form-data">
   <br />Name<br />
     <input type="text" placeholder="Enter Name" value="" name="name" /><br/>
      Recipie Ingridients<br />
@@ -50,10 +50,10 @@
      <p>Write Any Detail</p>
      <textarea id="t1" rows="10" cols="100" name="detail"></textarea><br />
 
-     <input type="image"  name="image" id="b1"/>
+     <input type="file"  name="choose image" id="b1"/>
 
     <input type="text" placeholder="Enter Name" value="" name="img" id="=b"/>
-    <button type="submit" name="Choose Upload" value="Choose Image" id="up">Choose Image</button><br /><br />
+    @*<button type="submit" name="Choose Upload" value="Choose Image" id="up">Choose Image</button><br /><br />*@
 
     <button type="submit" name="Submit" value="Submit">Submit</button>
 
